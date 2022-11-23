@@ -12,8 +12,8 @@ def printTable():
         count += 1
     count = 0
     #print(range(tableData[0]))
-    for j in range(tableData[0]):
-        for i in range(tableData):
+    for j in range(1, len(tableData[0])):
+        for i in range(1, len(tableData[])):
             print(tableData[j][i].rjust(colWidths[i]), end=' ')   
         print()
 
