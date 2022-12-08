@@ -1,8 +1,8 @@
 import re, pyperclip
 
 
-#text to search through, from clipboard
-#text_to_search = pyperclip.copy()
+#FIXME:#text to search through, from clipboard
+#text_to_search = pyperclip.paste()
 test = '''
 Write a regular expression that can detect dates in the DD/MM/YYYY format. Assume that the days range
 from 01 to 31, the months range from 01 to 12, and the years range from 1000 to 2999. Note that if the day
@@ -18,12 +18,9 @@ regular expression that can detect a valid date.
 
 #TODO: Make regex to find standard date-format
 
-date_regex = re.compile(r'')
-print(date_regex.search(test))
+date_regex = re.compile(r'([0-3][0-9]])/([0-1][0-9])/([1-2][0-9][0-9][0-9])')
+print(date_regex.findall(test))
 
-#TODO: Loop through the list
+#TODO: Loop through the list might need a 2D-list
 
 #TODO: Store the variables differently  
-
-#TODO: gonna use "findall" as return function
-

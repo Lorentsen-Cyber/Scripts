@@ -1,1 +1,1 @@
-printTable()
+Store the variables differently
