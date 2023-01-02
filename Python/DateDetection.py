@@ -3,7 +3,7 @@ import re, pyperclip
 
 #FIXME:#text to search through, from clipboard
 #text_to_search = pyperclip.paste()
-test = '''
+text = '''
 Write a regular expression that can detect dates in the DD/MM/YYYY format. Assume that the days range
 from 01 to 31, the months range from 01 to 12, and the years range from 1000 to 2999. Note that if the day
 or month is a single digit, it’ll have a leading zero.
@@ -16,11 +16,18 @@ is also evenly divisible by 400. Note how this calculation makes it impossible t
 regular expression that can detect a valid date.
 '''
 
-#TODO: Make regex to find standard date-format
-
-date_regex = re.compile(r'([0-3][0-9]])/([0-1][0-9])/([1-2][0-9][0-9][0-9])')
-print(date_regex.findall(test))
+#Regex for standard date format, returns a list of tuples
+date_regex = re.compile(r'([0-3][0-9])/([0-1][0-9])/([1-2][0-9][0-9][0-9])')
+#'dates' contain the results of the regex search 
+dates = date_regex.findall(text)
+#'31', '02', '2020' . '31', '04', '2021'
+#print(dates)
 
 #TODO: Loop through the list might need a 2D-list
 
-#TODO: Store the variables differently  
+for tuple in dates:
+    if tuple[1] == '02' and int(tuple[0]) > 28:
+        print('invalid date')
+
+    if tuple[1] == 0:
+        print(0)

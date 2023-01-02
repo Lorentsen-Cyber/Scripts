@@ -1,1 +1,1 @@
-Store the variables differently
+tuple[0]
