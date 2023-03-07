@@ -1,0 +1,4 @@
+fruits =['Mango' ,'Apple','Orange']
+
+for i in fruits:
+    print(int(fruits[i]), i)

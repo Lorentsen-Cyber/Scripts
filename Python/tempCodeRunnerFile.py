@@ -1,1 +1,1 @@
-model
+print
