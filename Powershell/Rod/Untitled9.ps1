@@ -1,1 +1,0 @@
-﻿get-volume | select driveletter, FilesystemLabel, @{L='pct used';E={($_.sizeremaining/$_.size).ToString("P", $nfi)}}
